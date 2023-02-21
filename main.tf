@@ -45,6 +45,25 @@ resource "aws_iam_policy" "lambda_custom_policy" {
                "*"
            ]
        },
+      {
+           "Effect": "Allow",
+           "Action": [
+               "s3:CreateBucket",
+               "s3:DeleteBucket",
+               "s3:DeleteBucketPolicy",
+               "s3:GetBucketPolicy",
+               "s3:PutBucketAcl",
+               "s3:PutBucketNotification",
+               "s3:PutBucketPolicy",
+               "s3:PutBucketPublicAccessBlock",
+               "s3:PutBucketLogging",
+               "s3:PutEncryptionConfiguration",
+               "s3:PutBucketCORS",
+               "s3:PutBucketTagging",
+               "s3:PutObjectTagging"
+           ],
+           "Resource": "*"
+       },
        
     ]
   })
