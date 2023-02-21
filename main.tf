@@ -22,29 +22,15 @@ resource "aws_iam_policy" "lambda_custom_policy" {
    {
            "Effect": "Allow",
            "Action": [
-               "codebuild:UpdateProject",
-               "codebuild:BatchGetBuilds",
-               "codebuild:StartBuild"
+               "logs:CreateLogGroup",
+               "logs:CreateLogStream",
+               "logs:PutLogEvents"
            ],
            "Resource": [
                "*"
            ]
        },
-       {
-           "Effect": "Allow",
-           "Action": [
-               "codecommit:GetBranch",
-               "codecommit:GetCommit",
-               "codecommit:CreateCommit",
-               "codecommit:CreateRepository",
-               "codecommit:DeleteRepository",
-               "codecommit:GetRepository",
-               "codecommit:TagResource"
-           ],
-           "Resource": [
-               "*"
-           ]
-       },
+       
       {
            "Effect": "Allow",
            "Action": [
