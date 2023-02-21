@@ -61,6 +61,24 @@ resource "aws_iam_policy" "lambda_custom_policy" {
            ],
            "Resource": "*"
        },
+      {
+           "Effect": "Allow",
+           "Action": [
+               "sagemaker:CreateEndpoint",
+               "sagemaker:CreateEndpointConfig",
+               "sagemaker:CreateModel",
+               "sagemaker:CreateWorkteam",
+               "sagemaker:DescribeModel",
+               "sagemaker:DescribeEndpointConfig",
+               "sagemaker:DescribeEndpoint",
+               "sagemaker:DescribeWorkteam",
+               "sagemaker:CreateCodeRepository",
+               "sagemaker:DescribeCodeRepository",
+               "sagemaker:UpdateCodeRepository",
+               
+           ],
+           "Resource": "*"
+       },
        
     ]
   })
