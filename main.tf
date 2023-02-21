@@ -37,3 +37,4 @@ resource "aws_iam_policy" "lambda_custom_policy" {
 resource "aws_iam_role_policy_attachment" "lambda_custom_attachment" {
   policy_arn = aws_iam_policy.lambda_custom_policy.arn
   role = aws_iam_role.lambda_custom_role.name
+}
